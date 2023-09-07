@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  db:
+    image: mongo
+    restart: always
+    container_name: telegram_bot
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=telegram
+      - MONGO_INITDB_ROOT_USERNAME=
+      - MONGO_INITDB_ROOT_PASSWORD=
+
